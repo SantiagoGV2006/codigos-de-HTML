@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabla multiplicacion del 9</title>
+</head>
+<body>
+    <script>
+
+        let num;
+        let contar;
+        let multipli;
+        let resultado;
+
+        num = 5;
+        multipli = 9;
+
+
+        for(contar=1;contar <= num; contar++){
+
+        resultado = multipli * contar;
+
+        if (resultado % 2 == 0) {
+            esPar = "Es par";
+
+        } else {
+            esPar = "Es impar";
+
+        }
+        console.log(multipli+ " x " +contar+ " = " +resultado+ " -> " +esPar);
+    }
+        
+
+    </script>
+</body>
+</html>

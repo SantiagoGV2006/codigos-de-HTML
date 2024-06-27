@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+</head>
+<body>
+    <script>
+
+    let salarioMinimo;
+    let subsidioTransporte;
+    let pagoTotal;
+    let descuento;
+
+    salarioMinimo = 1300000;
+    subsidioTransporte = 162000;
+    pagoTotal = 0;
+    descuento = 0;
+
+    let diasTrabajados = prompt("Ingresa el número de días trabajados:");
+    let valorDia = prompt("Ingresa el valor del día:");
+
+    let salarioTotal = diasTrabajados * valorDia;
+
+    if (salarioTotal > 2 * salarioMinimo) {
+        pagoTotal = salarioTotal + subsidioTransporte;
+    } else {
+        pagoTotal = salarioTotal;
+    }
+
+    if (salarioTotal > 4 * salarioMinimo) {
+        descuento = salarioTotal * 0.18;
+        descuento = salarioTotal * 0.04;
+    } else {
+        deducciones = salarioTotal * 0.12;
+}
+
+    let salud;
+    let pension;
+    let arl;
+
+    salud = salarioTotal * 0.12;
+    pension = salarioTotal * 0.16;
+    arl = salarioTotal * 0.052;
+    descuento = salud + pension + arl;
+
+    let salarioTotalNeto = pagoTotal - descuento;
+
+    let retencion = 0;
+    if (salarioTotalNeto > 4 * salarioMinimo) {
+        retencion = salarioTotal * 0.04;
+}
+    let salarioTotalNetoConRetencion = salarioTotalNeto - retencion;
+
+    console.log("Dias trabajado: " +diasTrabajados);
+    console.log("Valor del día: " +valorDia+ " COP");
+    console.log("Salario total: " +pagoTotal+ " COP");
+    if (salarioTotal > 2 * salarioMinimo) {
+    console.log("Subsidio de transporte: " +subsidioTransporte+ " COP");
+    } else {
+    console.log(`Subsidio de transporte: 0`);
+}
+    console.log("Deducciones: " +descuento+ " COP");
+    console.log("Salud: " +salud+ " COP");
+    console.log("Pension: " +pension+ " COP");
+    console.log("ARL:" +arl+ " COP");
+
+    if (salarioTotal * 4 >  salarioMinimo) {
+        console.log("Retención del 0.04: " +retencion+  " COP");
+    } else {
+        console.log(`Retención del 0.04: 0`);
+}
+console.log(`Salario total neto: ${(salarioTotalNetoConRetencion + (salarioTotal > 2 * salarioMinimo ? subsidioTransporte : 0)).toFixed(2)}`);
+</script>
+</body>
+</html>

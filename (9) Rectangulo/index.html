@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangulo mayor</title>
+</head>
+<body>
+    <script>
+        let rectanguloUno;
+        let rectanguloDos;
+        let baseUno;
+        let baseDos;
+        let alturaUno;
+        let alturaDos;
+
+        baseUno= prompt("Digite la base del primer rectángulo"); 
+        alturaUno= prompt("Digite la altura del primer rectángulo"); 
+        baseDos= prompt("Digite la base del segundo rectángulo"); 
+        alturaDos= prompt("Digite la altura del segundo rectángulo"); 
+
+        rectanguloUno= baseUno * alturaUno;
+        rectanguloDos= baseDos * alturaDos;
+
+        if(rectanguloUno == rectanguloDos){
+            console.log("Los dos rectangulos son iguales");
+        } else{
+
+            if(rectanguloUno  > rectanguloDos) {
+                console.log("Rectangulo uno es mayor");
+            }else{
+                console.log("Rectangulo dos es mayor");
+            }
+        }
+
+    </script>
+</body>
+</html>

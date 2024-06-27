@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par e impar</title>
+</head>
+<body>
+    <script>
+
+        let num;
+        let contar;
+        let multipli;
+        let resultado;
+        let par;
+        let tabla;
+        let impar;
+        let contPar = 0;
+        let contImpar = 0;
+
+        num = 5;
+        multipli = 1;
+
+        for(contar=1; contar <= num; contar++){
+
+            for(tabla = 1; tabla <= num; tabla++){
+  
+                resultado = contar * multipli;
+                
+                if (resultado % 2 === 0) {
+
+                    console.log(contar+ " x " +tabla+ " = " +resultado+ " (buzz) ");
+                    contPar++;
+                } else {
+
+                    console.log(contar+ " x " +tabla+ " = " +resultado+ " (bass) ");
+                    contImpar++;
+                }
+
+                multipli++;
+            }
+
+            multipli = 1;
+        }
+
+        console.log("Cantidad de pares: " + contPar);
+        console.log("Cantidad de impares: " + contImpar);
+
+</script>
+</body>
+</html>
